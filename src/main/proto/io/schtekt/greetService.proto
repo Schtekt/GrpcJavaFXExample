@@ -1,0 +1,18 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "io.schtekt";
+
+package proto;
+
+service GreetService {
+    rpc Greet(GreetRequest) returns (GreetResponse);
+}
+
+message GreetRequest {
+    string msg = 1;
+}
+
+message GreetResponse {
+    string msg = 1;
+}
